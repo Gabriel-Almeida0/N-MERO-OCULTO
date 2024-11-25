@@ -1,0 +1,148 @@
+/* style.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do Body */
+body {
+    background-color: #0d0d0d;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f5f5f5;
+}
+
+/* Container do Jogo */
+.game-container {
+    background: linear-gradient(145deg, #222831, #393e46);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 255, 234, 0.2), 0 5px 10px rgba(0, 255, 234, 0.2);
+    text-align: center;
+    width: 350px;
+    border: 2px solid #00f3ff;
+    position: relative;
+}
+
+/* Neon Glow para título */
+.game-container h1 {
+    margin-bottom: 20px;
+    color: #00ff9c;
+    text-shadow: 0 0 5px #00ff9c, 0 0 20px #00ff9c, 0 0 40px #00ff9c;
+    font-size: 1.5em;
+}
+
+/* Instruções */
+.game-container p {
+    margin-bottom: 15px;
+    color: #b2becd;
+}
+
+/* Input do Palpite */
+#guessInput {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #00f3ff;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background: #393e46;
+    color: #f5f5f5;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#guessInput:focus {
+    box-shadow: 0 0 10px #00f3ff;
+}
+
+/* Botão de Adivinhação */
+#guessBtn {
+    padding: 12px 25px;
+    background: #ff2e63;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+#guessBtn:hover {
+    background: #ff4563;
+    box-shadow: 0 0 10px #ff2e63, 0 0 20px #ff2e63;
+}
+
+/* Mensagem de Feedback */
+.message {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #00ff9c;
+    text-shadow: 0 0 5px #00ff9c, 0 0 20px #00ff9c;
+}
+
+/* Botão de Reinício */
+#restartBtn {
+    padding: 12px 25px;
+    background: #00f3ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+#restartBtn:hover {
+    background: #00d4e3;
+    box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+}
+
+/* Classe Oculta */
+.hidden {
+    display: none;
+}
+
+/* Estilizações adicionais para visual cyberpunk */
+::selection {
+    background: #ff2e63;
+    color: #ffffff;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(60deg, rgba(255, 46, 99, 0.2), rgba(0, 243, 255, 0.2));
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.game-container::before, .game-container::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #00f3ff, #ff2e63);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5;
+    border-radius: 20px;
+} 
+
+.game-container::after {
+    filter: blur(30px);
+} 

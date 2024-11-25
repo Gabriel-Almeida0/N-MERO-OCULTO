@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Número Oculto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Número Oculto</h1>
+        <p>Estou pensando em um número entre <span id="min">1</span> e <span id="max">100</span>.</p>
+        <input type="number" id="guessInput" placeholder="Digite seu palpite" min="1" max="100">
+        <button id="guessBtn">Adivinhar</button>
+        <p class="message" id="message">Faça seu palpite!</p>
+        <p>Tentativas: <span id="attempts">0</span></p>
+        <button id="restartBtn" class="hidden">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
